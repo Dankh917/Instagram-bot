@@ -11,14 +11,14 @@ time.sleep(1)
 driver.maximize_window()
 
 # a Function that logs you into the account and in case instagram blocks you and asks for a password from your e-mail the Function will do it as well .
-# all you have to do is wait. (in order to opreate the Function will require 2 fields to fill : 1.username of instagram(line 20 in file bot.py),  2.pass of instagram(line 22 in file bot.py),
+# all you have to do is wait. (in order to opreate the Function will require 2 fields to fill : 1.username of instagram(line 19 in file bot.py),  2.pass of instagram(line 21 in file bot.py),
 
 
 def login():
     login_element = driver.find_element_by_name("username")
-    login_element.send_keys("bot.py917")
+    login_element.send_keys("username-here")
     password_element = driver.find_element_by_name("password")
-    password_element.send_keys("bot.py917")
+    password_element.send_keys("pass-here")
     password_element.send_keys(Keys.RETURN)
     time.sleep(3)
     savecancel = driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[1]/a/div/div[2]/img')
@@ -44,7 +44,7 @@ def follow_sugg():
     back.click()
         
    
-# likes posts in an hashtag (1 field is required line 112 in file bot.py [without the "#" the Function will add it by itself])
+# likes posts in an hashtag (1 field is required line 111 in file bot.py [without the "#" the Function will add it by itself])
 def like_ph_hashtag(hashtag):
 # going into the hashtag itself
     search_bar = driver.find_element_by_xpath("//*[@id='react-root']/section/nav/div[2]/div/div/div[2]/input")
