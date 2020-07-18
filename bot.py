@@ -10,8 +10,8 @@ driver.get("https://www.instagram.com/")
 time.sleep(1)
 driver.maximize_window()
 
-# a Function that logs you into the account and in case instagram blocks you and asks for a password from your e-mail the Function will do it as well .
-# all you have to do is wait. (in order to opreate the Function will require 2 fields to fill : 1.username of instagram(line 19 in file bot.py),  2.pass of instagram(line 21 in file bot.py),
+
+#enter your login info for instagram at lines 19 and 21
 
 
 def login():
