@@ -11,8 +11,8 @@ time.sleep(1)
 driver.maximize_window()
 
 # a Function that logs you into the account and in case instagram blocks you and asks for a password from your e-mail the Function will do it as well .
-# all you have to do is wait. (in order to opreate the Function will require 4 fields to fill : 1.username of instagram(line 20 in file bot.py),  2.pass of instagram(line 22 in file bot.py),
-# 3.username of gmail(line 11 in file gml.py) 4.pass of gmail (line 11 in file gml.py)
+# all you have to do is wait. (in order to opreate the Function will require 2 fields to fill : 1.username of instagram(line 20 in file bot.py),  2.pass of instagram(line 22 in file bot.py),
+
 
 def login():
     try:
@@ -25,25 +25,6 @@ def login():
         savecancel = driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[1]/a/div/div[2]/img')
         savecancel.click()
         time.sleep(2)
-        cancel_button = driver.find_element_by_xpath("/html/body/div[4]/div/div/div/div[3]/button[2]")
-        cancel_button.click()
-# goes into e-mail extracts password if instagram blocks you for sus behaviour
-# in case it goes with the "except" the function will take a while to exacute
-    except:
-        send_email = driver.find_element_by_xpath('//*[@id="react-root"]/section/div/div/div[3]/form/span/button')
-        time.sleep(1)
-        send_email.click()
-        host = 'imap.gmail.com'
-        time.sleep(15)
-        my_inbox = main()
-        milon = str(my_inbox)
-        print(milon[4053:4059])
-        email_password = milon[4058:4064]
-        conf = driver.find_element_by_name("security_code")
-        conf.send_keys(email_password)
-        final_straw = driver.find_element_by_xpath('/html/body/div[1]/section/div/div/div[2]/form/span/button')
-        final_straw.click()
-        time.sleep(3)
         cancel_button = driver.find_element_by_xpath("/html/body/div[4]/div/div/div/div[3]/button[2]")
         cancel_button.click()
         
@@ -64,7 +45,7 @@ def follow_sugg():
     back.click()
         
    
-# likes posts in an hashtag (1 field is required line 131 in file bot.py [without the "#" the Function will add it by itself])
+# likes posts in an hashtag (1 field is required line 112 in file bot.py [without the "#" the Function will add it by itself])
 def like_ph_hashtag(hashtag):
 # going into the hashtag itself
     search_bar = driver.find_element_by_xpath("//*[@id='react-root']/section/nav/div[2]/div/div/div[2]/input")
