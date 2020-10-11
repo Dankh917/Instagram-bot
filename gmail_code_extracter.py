@@ -35,20 +35,7 @@ def get_inbox():
 
 
 
-my_inbox = get_inbox()
-#my_inbox = my_inbox[0]
-#my_inbox = str(my_inbox)
-#print(my_inbox)
 
-#pattern = re.compile(">\d\d\d\d\d\d<")
-
-#matchs= pattern.finditer(my_inbox)
-
-#for match in matchs:
-    #match = str(match)
-    #match = match[45:51]
-    #print(match)
-   
 
 
 
