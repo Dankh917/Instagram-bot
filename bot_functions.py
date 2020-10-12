@@ -8,8 +8,8 @@ from gmail_code_extracter import get_inbox
 
 
 host = 'imap.gmail.com'
-username = 'danchuk204@gmail.com'
-password = 'Fdan917635'
+username = 
+password = 
 
 
 
